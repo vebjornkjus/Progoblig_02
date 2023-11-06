@@ -1,0 +1,37 @@
+include color
+include image
+
+fun Scandinavian-flag(Middle, Outer, Background): #definerer hvilken
+  frame(
+    overlay-xy(rectangle(220, 20, "solid", Middle), #legger til et vannrett rektangel som utgjør en del av det innerste korset
+  0, -70, #bestemmer posisjon for rektangel
+      
+      overlay-xy(rectangle(20, 160, "solid", Middle), #legger til et loddrett rektangel som utgjør en del av det innerste korset
+    -60, 0, #bestemmer posisjon for rektangel
+        
+        overlay-xy(rectangle(220, 40, "solid", Outer), #legger til et vannrett rektangel som utgjør en del av det ytterste korset
+      0, -60, #bestemmer posisjon for rektangel
+          
+          overlay-xy(rectangle(40, 160, "solid", Outer), #legger til et loddrett rektangel som utgjør en del av det ytterste korset
+        -50, 0, #bestemmer posisjon for rektangel
+            
+            (rectangle(220, 160, "solid", Background))))))) #legger til det rektangelet som er bakgrunnen
+end
+
+#Norsk flagg:
+Norge = Scandinavian-flag(color(0, 32, 91, 1), color(255, 255, 255, 1), color(186, 12, 47, 1))
+
+#Dansk flagg:
+Danmark = Scandinavian-flag(color(255, 255, 255, 1), color(200, 16, 46, 1), color(200, 16, 46, 1))
+
+#Svensk flagg:
+Sverige = Scandinavian-flag(color(254, 204, 2, 1), color(0, 106, 167, 1), color(0, 106, 167, 1))
+
+#Finsk flagg:
+Finland = Scandinavian-flag(color(0, 47, 108, 1), color(0, 47, 108, 1), color(255, 255, 255, 1))
+
+#Færøyene flagg:
+Faroyene = Scandinavian-flag(color(237, 41, 57, 1), color(0, 101, 189, 1), color(255, 255, 255, 1))
+
+#Islandsk flagg:
+Island = Scandinavian-flag(color(220, 30, 53, 1), color(255, 255, 255, 1), color(2, 82, 156, 1)) 
